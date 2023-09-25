@@ -23,7 +23,7 @@ Course Writeup and HW in NTNU Learning Analytics Tools Implementation Applicatio
 ## 課程筆記區
 
 我使用 branch 的方式存放並管理上課練習的檔案
-- [第三週](https://github.com/KutsunaSubaRya/LATIA112-1/tree/feat/practice-week3)
+- [第三週](https://github.com/KutsunaSubaRya/LATIA112-1/tree/feat/week3-practice)
 
 
 ## 作業
