@@ -30,7 +30,7 @@ Course Writeup and HW in NTNU Learning Analytics Tools Implementation Applicatio
 
 
 ### 作業一
-
+- [作業一](https://github.com/KutsunaSubaRya/LATIA112-1/tree/feat/HW01)
 
 ### 作業二
 
