@@ -1,42 +1,39 @@
-# LATIA112-1
-Course Writeup and HW in NTNU Learning Analytics Tools Implementation Applications
+# LATIA112-1 HW01
 
-課名：學習分析工具實務應用 LATIA112-1
+## Virtual Environment
+Recommend to use venv to isolate you environment.
 
-授課教師：廖執善 老師
+```bash
+$ python3.11 -m venv venv
+$ source venv/bin/activate
+```
 
-姓名：蘇子權
+## Dependancy
 
-系級：資工 113
+```bash
+$ pip install -r requirements.txt
+```
 
-## 目錄
+## Material
+* [Career Development Support and Educational Practices in Universities: A Discussion of Educational Effectiveness of Internship in Enterprises from the Perspective of Cross-Boundary Learning](https://srda.sinica.edu.tw/datasearch_detail.php?id=3016)
 
-- [LATIA112-1](#latia112-1)
-  - [目錄](#目錄)
-  - [課程筆記區](#課程筆記區)
-  - [作業](#作業)
-    - [作業一](#作業一)
-    - [作業二](#作業二)
-    - [作業三](#作業三)
-  - [專題連結區](#專題連結區)
+### Change SAV File to CSV File
+I use [spss-converter](https://github.com/insightindustry/spss-converter) to solve it.
 
-## 課程筆記區
+* python code utilize spss-converter
+    * ```python
+        from spss_converter import read
 
-我使用 branch 的方式存放並管理上課練習的檔案
-- [第三週](https://github.com/KutsunaSubaRya/LATIA112-1/tree/feat/week3-practice)
+        read.to_csv('data.sav',target = 'file.csv')
+        ```
 
-
-## 作業
-
-
-### 作業一
-
-
-### 作業二
-
-
-### 作業三
-
-
-## 專題連結區
-
+* requirement.txt
+    * The spss-converter is never update, so pandas version might not upgrade the the newset version, or it will cause [line_terminator error](https://stackoverflow.com/questions/43684096/pandas-to-csv-got-an-unexpected-keyword-argument).
+    * ```txt
+        pandas==1.2.0
+        pyreadstat>=1.0.6
+        PyYAML==5.3.1
+        simplejson==3.17.2
+        validator-collection>=1.5.0
+        openpyxl>=3.0.7
+        ```
