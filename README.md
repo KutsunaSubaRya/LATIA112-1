@@ -1,5 +1,11 @@
 # LATIA112-1 HW02
 
+## TODO
+- [x] Specified Items in Assignment
+- [x] Annotation of Code
+- [x] Description and Guideline of Execution Code
+- [x] Demo Video
+
 ## Virtual Environment
 
 Recommend to use venv to isolate your environment.
@@ -53,6 +59,11 @@ The method to obtain the endpoint involves opening the Network tab, selecting th
     ```
 
 **Please note that data is exclusively retrieved using the keyword 'Minecraft'. You can modify the keyword at line 129 in the `main.py` file.**
+
+## Demo Video
+
+* [HW02 - Beautiful_Soup_and_Selenium](https://youtu.be/pX2tOqLQrmQ)
+* [HW02 - Scrapy_topUniversity](https://youtu.be/BhOQm14mPn4)
 
 ## Material
 
