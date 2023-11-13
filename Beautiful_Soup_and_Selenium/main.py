@@ -10,6 +10,7 @@ import bs4
 import re
 import csv
 
+
 driver = webdriver.Chrome()
 driver.get("https://ieeexplore.ieee.org/Xplore/home.jsp")
 res_list = []
@@ -79,6 +80,7 @@ def parse_info(input_string):
                 return None
 
 
+# Check if the element exists
 def check_exists(path):
     try:
         driver.find_element(By.CLASS_NAME, path)
@@ -87,6 +89,7 @@ def check_exists(path):
     return True
 
 
+# Wait for the element to show up
 def wait_for_element():
     delay = 10
     try:
@@ -97,12 +100,15 @@ def wait_for_element():
         print("Element is present in the DOM now... You can crawl the thing that you want.")
     except TimeoutException:
         print("Element did not show up")
+    # use BeautifulSoup to parse the source of the page
     source = bs4.BeautifulSoup(driver.page_source, "lxml")
     title_list = []
+    # Get the title of all the papers
     for title in source.find_all("h3", class_="text-md-md-lh"):
         title_list.append(title.text.strip())
     idx = int(0)
     sw = True
+    # Get the information of all the papers
     for detail in source.find_all("div", class_="publisher-info-container"):
         if not sw:
             sw = True
@@ -110,12 +116,15 @@ def wait_for_element():
         text = parse_info(detail.text.strip())
         res = {'Title': title_list[idx]}
         idx += 1
+        # Merge the two dictionaries, Title and the information of the paper
         res.update(text)
         sw = False
+        # Append the result to the list
         res_list.append(res)
     sleep(1)
 
 
+# input the keyword and search
 element = driver.find_element(By.CLASS_NAME, "Typeahead-input")
 element.send_keys("Minecraft")
 sleep(0.5)
@@ -123,7 +132,9 @@ element.send_keys(Keys.ENTER)
 wait_for_element()
 
 for i in range(2, 100):
+    # Scroll to the bottom of the page
     driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+    # Click the next button, if there is no next button, break the loop
     if not check_exists("stats-Pagination_arrow_next_" + str(i)):
         break
     driver.find_element(By.CLASS_NAME, "stats-Pagination_arrow_next_" + str(i)).click()
@@ -133,7 +144,9 @@ for i in range(2, 100):
 print("Crawling is done. Writing the file into file.csv...")
 
 csv_file = 'file.csv'
+# Define the fields of the csv file
 fields = ['Title', 'Year', 'Volume', 'Issue', 'Paper', 'Publisher']
+# Write the csv file
 with open(csv_file, 'w', newline='') as csvfile:
     writer = csv.DictWriter(csvfile, fieldnames=fields)
     writer.writeheader()
