@@ -33,6 +33,8 @@ Course Writeup and HW in NTNU Learning Analytics Tools Implementation Applicatio
 - [作業一](https://github.com/KutsunaSubaRya/LATIA112-1/tree/feat/HW01)
 
 ### 作業二
+- 備註：作業二 branch 裡的 README 一定要看，有詳細的寫指引、解釋、Demo Video，可以有效提升批改作業的進度。
+- [作業二](https://github.com/KutsunaSubaRya/LATIA112-1/tree/feat/HW02)
 
 
 ### 作業三
