@@ -29,7 +29,8 @@ $ source venv/bin/activate
 ## How To Use My Scrapy Code
 
 1. Install the dependancies
-2. ```bash
+2. Note that `file.csv` already exist in codebase, hence you **MAY CHANGE THE NAME TO THE OTHER** so as not to keep writing the data into `file.csv`. 
+    ```bash
     $ cd Scrapy_topUniversity
     $ scrapy crawl topUniversity -o file.csv
     ```
