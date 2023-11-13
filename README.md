@@ -1,42 +1,52 @@
-# LATIA112-1
-Course Writeup and HW in NTNU Learning Analytics Tools Implementation Applications
+# LATIA112-1 HW02
 
-課名：學習分析工具實務應用 LATIA112-1
+## Virtual Environment
 
-授課教師：廖執善 老師
+Recommend to use venv to isolate you environment.
 
-姓名：蘇子權
+```bash
+$ python3.9 -m venv venv
+$ source venv/bin/activate
+```
 
-系級：資工 113
+## Dependancy
 
-## 目錄
+* Requirements.txt
 
-- [LATIA112-1](#latia112-1)
-  - [目錄](#目錄)
-  - [課程筆記區](#課程筆記區)
-  - [作業](#作業)
-    - [作業一](#作業一)
-    - [作業二](#作業二)
-    - [作業三](#作業三)
-  - [專題連結區](#專題連結區)
+  * ```bash
+    $ pip install -r requirements.txt
+    ```
+* Chromedriver for MacOS
+  * ```bash
+    $ brew install --cask chromedriver
+    ```
 
-## 課程筆記區
+## How To Use My Scrapy Code
 
-我使用 branch 的方式存放並管理上課練習的檔案
-- [第三週](https://github.com/KutsunaSubaRya/LATIA112-1/tree/feat/week3-practice)
+1. Install the dependancies
+2. ```bash
+    $ cd Scrapy_topUniversity
+    $ scrapy crawl topUniversity -o file.csv
+    ```
 
+In my code, I am dealing with a Dynamic JS Website, where the data in the table is loaded dynamically. To retrieve the corresponding data, I have opted to use the website's API endpoint. 
 
-## 作業
+The method to obtain the endpoint involves opening the Network tab, selecting the Fetch/XHR filter tag, refreshing the webpage, and identifying the relevant keyword in the name file associated with the endpoint. By choosing the header, the request URL, which is the desired API endpoint, can be found. This approach allows for the successful retrieval of data in JSON content type.
 
+![](image.png)
 
-### 作業一
-- [作業一](https://github.com/KutsunaSubaRya/LATIA112-1/tree/feat/HW01)
+## How To Use My Selenium Code
 
-### 作業二
+1. Install the dependancies
+2. Check your Chrome Driver is executed or not
+3. ```bash
+    $ cd Selenium
+    $ python main.py
+    ```
 
+**Please note that data is exclusively retrieved using the keyword 'Minecraft.' You can modify the keyword at line 120 in the `main.py` file.**
 
-### 作業三
+## Material
 
-
-## 專題連結區
-
+* [QS World University Rankings 2024: Top global universities](https://www.topuniversities.com/university-rankings/world-university-rankings/2024)
+* [IEEE Xplore](https://ieeexplore.ieee.org/Xplore/home.jsp)
