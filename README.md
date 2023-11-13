@@ -44,7 +44,7 @@ The method to obtain the endpoint involves opening the Network tab, selecting th
     $ python main.py
     ```
 
-**Please note that data is exclusively retrieved using the keyword 'Minecraft.' You can modify the keyword at line 120 in the `main.py` file.**
+**Please note that data is exclusively retrieved using the keyword 'Minecraft'. You can modify the keyword at line 120 in the `main.py` file.**
 
 ## Material
 
