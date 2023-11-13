@@ -2,7 +2,7 @@
 
 ## Virtual Environment
 
-Recommend to use venv to isolate you environment.
+Recommend to use venv to isolate your environment.
 
 ```bash
 $ python3.9 -m venv venv
