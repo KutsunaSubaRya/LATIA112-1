@@ -21,6 +21,11 @@ $ source venv/bin/activate
     $ brew install --cask chromedriver
     ```
 
+## Specified Items in Assignment
+- [x] Beautiful Soap
+- [x] Selenium
+- [x] Scrapy 
+
 ## How To Use My Scrapy Code
 
 1. Install the dependancies
@@ -35,12 +40,14 @@ The method to obtain the endpoint involves opening the Network tab, selecting th
 
 ![](image.png)
 
-## How To Use My Selenium Code
+## Use My Beautiful_Soup_and_Selenium Code
+
+> In this practice, I integrate the methods specified in the tasks from homework for **Selenium** and **Beautiful Soup** to create a web crawler for a particular website. At last, I reached the goal, which is to parse the data and save it as a CSV file.
 
 1. Install the dependancies
 2. Check your Chrome Driver is executed or not
 3. ```bash
-    $ cd Selenium
+    $ cd Beautiful_Soup_and_Selenium
     $ python main.py
     ```
 
