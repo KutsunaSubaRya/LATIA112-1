@@ -88,29 +88,42 @@ def azure_sentiment(user_input):
         documents,
         show_opinion_mining=True,
         language="zh-Hant")
-    print("response=", response)
     docs = [doc for doc in response if not doc.is_error]
     ret = ""
     for idx, doc in enumerate(docs):
-        ret += "------------------------------\n\n以下是分析句子中的情緒程度的分數：\n\n"
-        ret += "正向程度分數："
+        ret += "------------------------------\n\n以下是分析句子中的情緒程度的綜合分數：\n\n"
+        ret += "    正向程度分數："
         ret += str(int(doc.confidence_scores.positive * 100)) + "分\n"
-        ret += "負向程度分數："
+        ret += "    負向程度分數："
         ret += str(int(doc.confidence_scores.negative * 100)) + "分\n"
-        ret += "中立程度分數："
+        ret += "    中立程度分數："
         ret += str(int(doc.confidence_scores.neutral * 100)) + "分\n"
         ret += "\n\n------------------------------\n\n以下是分析句子中的實體情緒評級分類：\n\n"
         if doc.sentiment == "positive":
-            ret += "評級：正向\n"
+            ret += "    評級：正向\n"
         elif doc.sentiment == "negative":
-            ret += "評級：負向\n"
+            ret += "    評級：負向\n"
         else:
-            ret += "評級：中立\n"
-    result = text_analytics_client.recognize_entities(documents)
-    result = [review for review in result if not review.is_error]
+            ret += "    評級：中立\n"
+
+    for idx, doc in enumerate(docs):
+        ret += "\n\n------------------------------\n\n以下是分析句子中的關鍵主詞的評級與評分：\n\n"
+        for sentence in doc.sentences:
+            ret += f"    句子 '{sentence.text}' 的情緒分析結果為：\n"
+            if sentence.sentiment == "positive":
+                ret += "        評級：正向\n"
+            elif sentence.sentiment == "negative":
+                ret += "        評級：負向\n"
+            else:
+                ret += "        評級：中立\n"
+            ret += "        正向程度分數：" + str(int(sentence.confidence_scores.positive * 100)) + "分\n"
+            ret += "        負向程度分數：" + str(int(sentence.confidence_scores.negative * 100)) + "分\n"
+            ret += "        中立程度分數：" + str(int(sentence.confidence_scores.neutral * 100)) + "分\n"
 
     ret += "\n------------------------------\n\n以下是分析句子中的實體：\n\n"
 
+    result = text_analytics_client.recognize_entities(documents)
+    result = [review for review in result if not review.is_error]
     for idx, review in enumerate(result):
         for entity in review.entities:
             tmp_str = ""
@@ -142,7 +155,7 @@ def azure_sentiment(user_input):
                 tmp_str = "地址"
             elif entity.category == "IP":
                 tmp_str = "IP"
-            ret += f"該實體 '{entity.text}' 的分類為： '{tmp_str}'\n"
+            ret += f"    該實體 '{entity.text}' 的分類為： '{tmp_str}'\n"
     return ret
 
 
