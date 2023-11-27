@@ -1,44 +1,39 @@
-# LATIA112-1
-Course Writeup and HW in NTNU Learning Analytics Tools Implementation Applications
+# LATIA112-1 HW03
 
-課名：學習分析工具實務應用 LATIA112-1
-
-授課教師：廖執善 老師
-
-姓名：蘇子權
-
-系級：資工 113
-
-## 目錄
-
-- [LATIA112-1](#latia112-1)
-  - [目錄](#目錄)
-  - [課程筆記區](#課程筆記區)
-  - [作業](#作業)
-    - [作業一](#作業一)
-    - [作業二](#作業二)
-    - [作業三](#作業三)
-  - [專題連結區](#專題連結區)
-
-## 課程筆記區
-
-我使用 branch 的方式存放並管理上課練習的檔案
-- [第三週](https://github.com/KutsunaSubaRya/LATIA112-1/tree/feat/week3-practice)
+## TODO
+- [ ] Part 1
+  - [ ] 先了解Azure語言服務有哪些
+  - [ ] 請試著規劃一個運用語言服務的教育應用
+  - [ ] 做一個小實作
+- [x] Part 2
+  - [x] 顯示分數
+  - [x] 中文：正向/中性/負向
+  - [x] 把取得的主詞也顯示出來
+    - [x] 我是把所有取得的詞的分類都顯示出來
 
 
-## 作業
+## Virtual Environment
+
+Recommend to use venv to isolate your environment.
+
+```bash
+$ python3.9 -m venv venv
+$ source venv/bin/activate
+```
+
+## Dependancy
+
+* Requirements.txt
+
+  * ```bash
+    $ pip install -r requirements.txt
+    ```
 
 
-### 作業一
-- [作業一](https://github.com/KutsunaSubaRya/LATIA112-1/tree/feat/HW01)
+## How To Use My Code
 
-### 作業二
-- 備註：作業二 branch 裡的 README 一定要看，有詳細的寫指引、解釋、Demo Video，可以有效提升批改作業的進度。
-- [作業二](https://github.com/KutsunaSubaRya/LATIA112-1/tree/feat/HW02)
-
-
-### 作業三
-
-
-## 專題連結區
-
+1. Install the dependancies
+2. Note that I have set the port in my code, which is `8000`
+3. ```py
+   $ python app.py
+   ```
