@@ -38,6 +38,8 @@ Course Writeup and HW in NTNU Learning Analytics Tools Implementation Applicatio
 
 
 ### 作業三
+- 備註：作業三 branch 裡的 README 一定要看，有詳細的寫作業指定 Part 1 的回答，以及兩個 Part 實作結果的 Line 截圖。
+- [作業三](https://github.com/KutsunaSubaRya/LATIA112-1/tree/feat/HW03)
 
 
 ## 專題連結區
