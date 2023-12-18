@@ -43,4 +43,11 @@ Course Writeup and HW in NTNU Learning Analytics Tools Implementation Applicatio
 
 
 ## 專題連結區
+- 成果網站連結: https://latiafp-frontend.subarya.me/
+- 投影片連結: https://docs.google.com/presentation/d/10ndni-MOqnmkHX4e9c247DWRGDJNzzYuDl3weQZSRH4/edit?usp=sharing
+- 前端 repo: https://github.com/LATIA112-1-Finial-Project/FP-Frontend
+- 後端 repo: https://github.com/LATIA112-1-Finial-Project/FP-Backend
+- 爬蟲 repo
+  - Top University repo: https://github.com/LATIA112-1-Finial-Project/Scrapy-TopUniversity
+  - arXiv repo: https://github.com/LATIA112-1-Finial-Project/Arxiv-Data
 
