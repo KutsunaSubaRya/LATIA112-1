@@ -41,6 +41,9 @@ Course Writeup and HW in NTNU Learning Analytics Tools Implementation Applicatio
 - 備註：作業三 branch 裡的 README 一定要看，有詳細的寫作業指定 Part 1 的回答，以及兩個 Part 實作結果的 Line 截圖。
 - [作業三](https://github.com/KutsunaSubaRya/LATIA112-1/tree/feat/HW03)
 
+### 作業四
+- 備註：由於我自己 GitHub 帳號的 gh-pages 已經作為[我的部落格](https://kutsunasubarya.github.io/)使用，因此我的繳交方式是額外開一個 Organization 並使用該組織的 gh-pages 部署，下面作業四的連結已經是該組織的連結了。
+- [作業四](https://github.com/latia-hw4-subarya/latia-hw4-subarya.github.io/tree/main)
 
 ## 專題連結區
 - 成果網站連結: https://latiafp-frontend.subarya.me/
